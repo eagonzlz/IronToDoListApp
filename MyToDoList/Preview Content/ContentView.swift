@@ -9,9 +9,9 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject private var viewModel = TasksViewModel()
+    @StateObject private var profileViewModel = ProfileViewModel()
     @State private var isAddTaskViewPresented = false
-    @State private var taskToDelete: Task? = nil
-    @State private var isShowingDeleteAlert = false
+    @State private var isProfileViewPresented = false
 
     var body: some View {
         NavigationView {
@@ -28,12 +28,7 @@ struct ContentView: View {
                                 TaskRowView(task: $task)
                             }
                         }
-                        .onDelete { indexSet in
-                            if let index = indexSet.first {
-                                taskToDelete = viewModel.tasks[index]
-                                isShowingDeleteAlert = true
-                            }
-                        }
+                        .onDelete(perform: viewModel.deleteTask)
                     }
                 }
             }
@@ -46,25 +41,19 @@ struct ContentView: View {
                         Image(systemName: "plus")
                     }
                 }
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button(action: {
+                        isProfileViewPresented = true
+                    }) {
+                        Image(systemName: "person.crop.circle")
+                    }
+                }
             }
             .sheet(isPresented: $isAddTaskViewPresented) {
                 AddTaskView(viewModel: viewModel, isPresented: $isAddTaskViewPresented)
             }
-            .alert(isPresented: $isShowingDeleteAlert) {
-                Alert(
-                    title: Text("Delete Task"),
-                    message: Text("Are you sure you want to delete this task?"),
-                    primaryButton: .destructive(Text("Delete")) {
-                        if let task = taskToDelete,
-                           let index = viewModel.tasks.firstIndex(where: { $0.id == task.id }) {
-                            viewModel.deleteTask(at: IndexSet(integer: index))
-                        }
-                        taskToDelete = nil
-                    },
-                    secondaryButton: .cancel {
-                        taskToDelete = nil
-                    }
-                )
+            .sheet(isPresented: $isProfileViewPresented) {
+                ProfileView(viewModel: profileViewModel)
             }
         }
     }
