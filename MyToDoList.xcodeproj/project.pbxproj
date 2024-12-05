@@ -16,6 +16,21 @@
 			path = MyToDoList;
 			sourceTree = "<group>";
 		};
+		A3327BFF2D01D6EC001B2FD6 /* Models */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A3327C002D01D6F0001B2FD6 /* Views */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A3327C012D01D6F1001B2FD6 /* ViewModels */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,6 +49,9 @@
 			children = (
 				A3327BEC2D01D57C001B2FD6 /* MyToDoList */,
 				A3327BEB2D01D57C001B2FD6 /* Products */,
+				A3327BFF2D01D6EC001B2FD6 /* Models */,
+				A3327C002D01D6F0001B2FD6 /* Views */,
+				A3327C012D01D6F1001B2FD6 /* ViewModels */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +80,9 @@
 			);
 			fileSystemSynchronizedGroups = (
 				A3327BEC2D01D57C001B2FD6 /* MyToDoList */,
+				A3327BFF2D01D6EC001B2FD6 /* Models */,
+				A3327C002D01D6F0001B2FD6 /* Views */,
+				A3327C012D01D6F1001B2FD6 /* ViewModels */,
 			);
 			name = MyToDoList;
 			packageProductDependencies = (
