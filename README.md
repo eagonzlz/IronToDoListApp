@@ -30,20 +30,10 @@ Shows detailed task information with options to edit or delete.
 ---
 
 ## Usage Instructions
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/yourusername/todo-app.git
-   ```
-
-2. **Open the project in Xcode**:
-   ```bash
-   cd todo-app
-   open ToDoApp.xcodeproj
-   ```
-
-3. **Run the application**:
-   - Select a simulator or a connected device.
-   - Press **Command + R** to build and run the app.
+1. Tap the (+) button to add a task
+2. Tap on a task to edit it.
+3. Swipe on a task to delete it.
+4. Tap the checkbox to mark the task as complete!
 
 ---
 
@@ -56,37 +46,30 @@ Shows detailed task information with options to edit or delete.
   - Seamless transitions between views using `NavigationLink`.
 - **Shared State Management**:
   - Uses `TasksViewModel` to manage tasks across views.
-- **Intuitive UI**:
-  - Clean and responsive interface optimized for all screen sizes.
 
 ---
 
 ## Challenges and Solutions
 
 ### Challenge 1: Managing Bindings Between Views
-- **Problem**: Passing data incorrectly caused UI inconsistencies.
-- **Solution**: Implemented `@Binding` to enable proper two-way data flow between parent and child views.
+Passing data incorrectly caused UI inconsistencies. Adding `@Binding` to enable proper two-way data flow between parent and child views fixed the problem.
 
 ### Challenge 2: Task Deletion with Confirmation
-- **Problem**: Swipe-to-delete could accidentally remove tasks.
-- **Solution**: Added a confirmation alert to ensure intentional deletions.
+Swipe-to-delete accidentally removed tasks, so a confirmation alert was added to ensure intentional deletions.
 
 ### Challenge 3: Navigating to Task Details
-- **Problem**: Crashes occurred when navigating without correctly passing required data.
-- **Solution**: Ensured the `task` and `viewModel` were correctly initialized and passed to `TaskDetailView`.
+Crashes occurred when navigating without correctly passing required data. Ensured the `task` and `viewModel` were correctly initialized and passed to `TaskDetailView`.
 
 ---
 
 ## Future Enhancements
-1. **Data Persistence**:
-   - Save tasks between app sessions using Core Data or UserDefaults.
-2. **Reminders and Notifications**:
+1.  **Reminders and Notifications**:
    - Allow users to set reminders for tasks with local notifications.
-3. **Customizable Categories**:
+2. **Customizable Categories**:
    - Organize tasks by categories or tags for better sorting.
-4. **Dark Mode Support**:
+3. **Dark Mode Support**:
    - Add full support for dark mode to improve accessibility.
-5. **Profile Features**:
+4. **Profile Features**:
    - Expand the **Profile View** with user settings, themes, and account management.
 
 ---
