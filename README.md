@@ -10,22 +10,22 @@ The **To-Do List Application** is a task management tool built using SwiftUI. It
 ### Task List View
 Displays all tasks and allows navigation to task details or swipe-to-delete functionality.
 
-![Task List View Screenshot](./Screenshots/TaskListView.png)
+![TaskRowView](https://github.com/user-attachments/assets/6db3e0fc-08ca-4de8-a1ff-b416e8825b59)
 
 ### Add Task View
 A form to input and save a new task.
 
-![Add Task View Screenshot](./Screenshots/AddTaskView.png)
+![AddTaskView](https://github.com/user-attachments/assets/8438ddae-cd17-43b6-9aea-e4547f0cfb8b)
 
 ### Task Detail View
 Shows detailed task information with options to edit or delete.
 
-![Task Detail View Screenshot](./Screenshots/TaskDetailView.png)
+![TaskDetailView](https://github.com/user-attachments/assets/b7db27c4-93e3-43b5-97e9-469d0436f0cf)
 
 ### Profile View
-(Optional) Displays user profile and app-related settings.
+Displays user profile and app-related settings.
 
-![Profile View Screenshot](./Screenshots/ProfileView.png)
+![ProfileView](https://github.com/user-attachments/assets/4a628834-d749-451a-8327-72c2d40180b9)
 
 ---
 
